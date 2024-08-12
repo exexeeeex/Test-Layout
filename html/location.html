@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../assets/css/_global.css" />
+        <link rel="stylesheet" href="../assets/css/_constants.css" />
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <link rel="stylesheet" href="../assets/css/_fonts.css" />
+        <title>Layout</title>
+    </head>
+    <body>
+        <header class="header">
+            <img class="header__logo image" src="../assets/svgs/logo.svg" alt="logo" />
+            <img class="image" src="../assets/svgs/exit.svg" alt="exit" />
+        </header>
+        <section class="place">
+            <aside id="navigation" class="navigation"></aside>
+            <section class="main__place">
+                <h1 class="place__location__title">Локации / Все локации</h1>
+                <section class="place__location">
+                    <div id="place__location__types" class="place__location__types"></div>
+                    <div class="place__location__reload">
+                        <img src="../assets/svgs/reload.svg" alt="" />
+                        <h1 class="place__location__reload__title">Синхронизация</h1>
+                        <p class="place__location__reload__date">(17.05.2024 15:23:21)</p>
+                    </div>
+                </section>
+                <section class="place__additional">
+                    <button id="place__additional__create" class="place__additional__create">
+                        + Создать локацию
+                    </button>
+                    <div class="place__additional__filter">
+                        <div style="display: flex; align-items: center; width: 450px; gap: 10px">
+                            <input type="checkbox" class="place__additional__filter__check" />
+                            <p class="place__additional__filter__text">
+                                Поиск по точному вхождению
+                            </p>
+                        </div>
+                        <div class="place__additional__search">
+                            <img
+                                class="place__additional__search__img"
+                                src="../assets/svgs/search.svg"
+                                alt=""
+                            />
+                            <input
+                                placeholder="Поиск"
+                                type="text"
+                                class="place__additional__search__input"
+                            />
+                        </div>
+                    </div>
+                </section>
+                <section id="place__locations_list" class="place__locations_list"></section>
+            </section>
+        </section>
+        <footer class="footer"></footer>
+        <section id="popup" class="hide">
+            <div class="popup__container">
+                <div id="popup__container__block" class="popup__container__block">
+                    <h3 class="popup__container__block__title">Создать локацию</h3>
+                    <input
+                        class="popup__container__block__input"
+                        placeholder="Название"
+                        type="text"
+                    />
+                    <input
+                        class="popup__container__block__input"
+                        placeholder="Штрихкод"
+                        type="text"
+                    />
+                    <input class="popup__container__block__input" placeholder="RFID" type="text" />
+                    <input
+                        class="popup__container__block__input"
+                        placeholder="Вложенность"
+                        type="text"
+                    />
+                    <div class="popup__container__block__slide">
+                        <p class="popup__container__block__slide__text">Вирутальная локация</p>
+                        <input
+                            class="popup__container__block__slide__input"
+                            type="checkbox"
+                            id="switch"
+                        /><label for="switch"></label>
+                    </div>
+                    <div class="popup__container__block__slide">
+                        <p class="popup__container__block__slide__text">Локация для утерь</p>
+                        <input
+                            class="popup__container__block__slide__input"
+                            type="checkbox"
+                            id="switchadd"
+                        /><label for="switchadd"></label>
+                    </div>
+                    <div class="popup__container__block__buttons">
+                        <div class="popup__container__block__buttons__create">
+                            <img src="../assets/svgs/save.svg" alt="save" />
+                            <p class="popup__container__block__buttons__create__text">Создать</p>
+                        </div>
+                        <div id="remove" class="popup__container__block__buttons__remove">
+                            <p class="popup__container__block__buttons__remove__text">Отменить</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="edit__popup" class="hide">
+            <div id="popup__container__edit" class="popup__container">
+                <div id="popup__container__block__edit" class="popup__container__block">
+                    <h3 class="popup__container__block__title">Изменить локацию</h3>
+                    <input
+                        class="popup__container__block__input"
+                        placeholder="Название"
+                        type="text"
+                    />
+                    <input
+                        class="popup__container__block__input"
+                        placeholder="Штрихкод"
+                        type="text"
+                    />
+                    <input class="popup__container__block__input" placeholder="RFID" type="text" />
+                    <input
+                        class="popup__container__block__input"
+                        placeholder="Вложенность"
+                        type="text"
+                    />
+                    <div class="popup__container__block__slide">
+                        <p class="popup__container__block__slide__text">Вирутальная локация</p>
+                        <input
+                            class="popup__container__block__slide__input"
+                            type="checkbox"
+                            id="switch"
+                        /><label for="switch"></label>
+                    </div>
+                    <div class="popup__container__block__slide">
+                        <p class="popup__container__block__slide__text">Локация для утерь</p>
+                        <input
+                            class="popup__container__block__slide__input"
+                            type="checkbox"
+                            id="switchaddedit"
+                        /><label for="switchaddedit"></label>
+                    </div>
+                    <div class="popup__container__block__buttons">
+                        <div class="popup__container__block__buttons__remove">
+                            <img src="../assets/svgs/close.svg" alt="save" />
+                            <p class="popup__container__block__buttons__remove__text">Удалить</p>
+                        </div>
+                        <div id="removeedit" class="popup__container__block__buttons__remove">
+                            <p class="popup__container__block__buttons__remove__text">Отменить</p>
+                        </div>
+                        <div class="popup__container__block__buttons__save">
+                            <img src="../assets/svgs/save.svg" alt="" />
+                            <p class="popup__container__block__buttons__create__text">Сохранить</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="../js/_constants.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

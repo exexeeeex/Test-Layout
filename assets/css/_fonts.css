@@ -1,0 +1,38 @@
+/* Futura PT */
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/futura/FuturaCyrillicLight.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/futura/FuturaCyrillicMedium.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/futura/FuturaCyrillicBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/futura/FuturaCyrillicHeavy.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Montserrat */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat\ Medium\ 500.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
